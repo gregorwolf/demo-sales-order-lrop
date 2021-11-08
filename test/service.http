@@ -1,0 +1,39 @@
+###
+GET {{$dotenv backend}}/sap/opu/odata/sap/ZDEMO_C_SALESORDER_TX_CDS/?sap-client=400
+Authorization: Basic {{$dotenv USER}}:{{$dotenv PASSWORD}}
+Accept: application/json
+###
+GET {{$dotenv backend}}/sap/opu/odata/sap/ZDEMO_C_SALESORDER_TX_CDS/$metadata
+Authorization: Basic {{$dotenv USER}}:{{$dotenv PASSWORD}}
+### Get CSRF Token
+# @name getCSRF
+HEAD {{$dotenv backend}}/sap/opu/odata/sap/ZDEMO_C_SALESORDER_TX_CDS/
+Authorization: Basic {{$dotenv USER}}:{{$dotenv PASSWORD}}
+X-CSRF-Token: Fetch
+### Read Token to Variable
+@csrf={{getCSRF.response.headers.x-csrf-token}}
+POST {{$dotenv backend}}/sap/opu/odata/sap/ZDEMO_C_SALESORDER_TX_CDS/ZDEMO_C_SalesOrder_TX('5000000111')/to_Item
+Content-Type: application/json
+Accept: application/json
+Authorization: Basic {{$dotenv USER}}:{{$dotenv PASSWORD}}
+X-CSRF-Token: {{csrf}}
+
+{
+  "Product":"FF-1000",
+  "Quantity":5
+}
+
+###
+GET {{$dotenv backend}}/sap/opu/odata/sap/ZDEMO_C_SALESORDER_TX_CDS/ZDEMO_C_SalesOrderItem_TX
+Authorization: Basic {{$dotenv USER}}:{{$dotenv PASSWORD}}
+Accept: application/json
+
+###
+GET {{$dotenv backend}}/sap/opu/odata/sap/ZDEMO_C_SALESORDER_TX_CDS/ZDEMO_C_SalesOrderItem_TX(SalesOrder='5000000111',SalesOrderItem='20')
+  ?$expand=to_Product
+Authorization: Basic {{$dotenv USER}}:{{$dotenv PASSWORD}}
+Accept: application/json
+###
+GET {{$dotenv backend}}/sap/opu/odata/sap/ZDEMO_C_SALESORDER_TX_CDS/Sepm_I_SalesOrdOverallStatus
+Authorization: Basic {{$dotenv USER}}:{{$dotenv PASSWORD}}
+Accept: application/json

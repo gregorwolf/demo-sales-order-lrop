@@ -1,0 +1,50 @@
+<edmx:Edmx xmlns:edmx="http://docs.oasis-open.org/odata/ns/edmx" Version="4.0">
+    <edmx:Reference Uri="https://sap.github.io/odata-vocabularies/vocabularies/Common.xml">
+        <edmx:Include Namespace="com.sap.vocabularies.Common.v1" Alias="Common" />
+    </edmx:Reference>
+    <edmx:Reference Uri="https://sap.github.io/odata-vocabularies/vocabularies/UI.xml">
+        <edmx:Include Namespace="com.sap.vocabularies.UI.v1" Alias="UI" />
+    </edmx:Reference>
+    <edmx:Reference Uri="https://sap.github.io/odata-vocabularies/vocabularies/Communication.xml">
+        <edmx:Include Namespace="com.sap.vocabularies.Communication.v1" Alias="Communication" />
+    </edmx:Reference>
+    <edmx:Reference Uri="/sap/opu/odata/sap/ZDEMO_C_SALESORDER_TX_CDS/$metadata">
+        <edmx:Include Namespace="ZDEMO_C_SALESORDER_TX_CDS" Alias="SAP" />
+    </edmx:Reference>
+    <edmx:DataServices>
+        <Schema xmlns="http://docs.oasis-open.org/odata/ns/edm" Namespace="test">
+            <Annotations Target="SAP.ZDEMO_C_SalesOrder_TXType">
+                <Annotation Term="UI.Facets">
+                    <Collection>
+                        <Record Type="UI.ReferenceFacet">
+                            <PropertyValue Property="Label" String="Business Partner" />
+                            <PropertyValue Property="ID" String="BusinessPartner" />
+                            <PropertyValue Property="Target" AnnotationPath="@UI.FieldGroup#BusinessPartner" />>
+                        </Record>
+                        <Record Type="UI.ReferenceFacet">
+                            <PropertyValue Property="Label" String="Order Value" />
+                            <PropertyValue Property="ID" String="OrderValue" />
+                            <PropertyValue Property="Target" AnnotationPath="@UI.FieldGroup#OrderValue" />>
+                        </Record>
+                        <Record Type="UI.ReferenceFacet">
+                            <PropertyValue Property="Label" String="Items" />
+                            <PropertyValue Property="ID" String="Items" />
+                            <PropertyValue Property="Target" AnnotationPath="to_Item/@UI.LineItem" />>
+                        </Record>
+                    </Collection>
+                </Annotation>
+            </Annotations>
+            <Annotations Target="ZDEMO_C_SALESORDER_TX_CDS.ZDEMO_C_SalesOrderItem_TXType">
+                <Annotation Term="UI.Facets">
+                    <Collection>
+                        <Record Type="UI.ReferenceFacet">
+                            <PropertyValue Property="Label" String="Details" />
+                            <PropertyValue Property="ID" String="Details" />
+                            <PropertyValue Property="Target" AnnotationPath="@UI.FieldGroup#Details" />
+                        </Record>
+                    </Collection>
+                </Annotation>
+            </Annotations>
+        </Schema>
+    </edmx:DataServices>
+</edmx:Edmx>
