@@ -1,0 +1,23 @@
+# yaml-language-server: $schema=https://sap.github.io/ui5-tooling/schema/ui5.yaml.json
+
+specVersion: '2.2'
+metadata:
+  name: 'salesorder'
+type: application
+builder:
+  resources:
+    excludes:
+      - /test/**
+      - /localService/**
+  customTasks:
+    - name: deploy-to-abap
+      afterTask: generateCachebusterInfo
+      configuration:
+        target:
+          url: http://www.kentivo-cloud.de:8000
+          client: "400"
+        app:
+          name: ZSOLROP
+          description: Sales Order LROP
+          package: $ZDEMO_SO_UI
+          transport: ""
