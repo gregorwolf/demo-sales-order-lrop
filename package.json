@@ -12,7 +12,7 @@
 	],
 	"main": "webapp/index.html",
 	"scripts": {
-		"start": "fiori run --open 'test/flpSandbox.html#salesorder-tile'",
+		"start": "fiori run --open 'test/flpSandbox.html#SalesOrder-manage'",
 		"start-local": "fiori run --config ./ui5-local.yaml --open 'test/flpSandboxMockServer.html#salesorder-tile'",
 		"start-noflp": "fiori run --open 'index.html'",
 		"build": "ui5 build -a --clean-dest --include-task=generateManifestBundle generateCachebusterInfo",
