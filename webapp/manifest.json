@@ -44,6 +44,21 @@
         "sourceTemplate": {
             "id": "ui5template.smartTemplate",
             "version": "1.40.12"
+        },
+        "crossNavigation": {
+            "inbounds": {
+                "intent1": {
+                    "signature": {
+                        "parameters": {},
+                        "additionalParameters": "allowed"
+                    },
+                    "semanticObject": "SalesOrder",
+                    "action": "manage",
+                    "title": "{{appTitle}}",
+                    "info": "{{appInfo}}",
+                    "subTitle": "{{appSubTitle}}"
+                }
+            }
         }
     },
     "sap.ui": {
