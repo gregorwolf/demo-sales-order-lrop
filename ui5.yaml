@@ -30,3 +30,5 @@ server:
           src: ./appconfig
         - path: /resources/test.salesorder
           src: ./webapp
+        - path: /resources/test.salesorderovp
+          src: ../salesorder-ovp/webapp

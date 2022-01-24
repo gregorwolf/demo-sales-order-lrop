@@ -5,6 +5,12 @@
             "applicationType": "URL",
             "url": "../resources/test.salesorder",
             "title": "Sales Orders"
+        },
+        "SalesOrder-ovp": {
+            "additionalInformation": "SAPUI5.Component=test.salesorderovp",
+            "applicationType": "URL",
+            "url": "../resources/test.salesorderovp",
+            "title": "Sales Orders OVP"
         }
     }
 }
