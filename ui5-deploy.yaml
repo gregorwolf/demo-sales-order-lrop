@@ -15,7 +15,6 @@ builder:
       configuration:
         target:
           url: http://www.kentivo-cloud.de:8000
-          client: "400"
         app:
           name: ZSOLROP
           description: Sales Order LROP
