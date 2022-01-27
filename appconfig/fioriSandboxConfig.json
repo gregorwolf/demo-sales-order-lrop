@@ -3,13 +3,13 @@
         "SalesOrder-manage": {
             "additionalInformation": "SAPUI5.Component=test.salesorder",
             "applicationType": "URL",
-            "url": "../resources/test.salesorder",
+            "url": "/webapp",
             "title": "Sales Orders"
         },
         "SalesOrder-ovp": {
             "additionalInformation": "SAPUI5.Component=test.salesorderovp",
             "applicationType": "URL",
-            "url": "../resources/test.salesorderovp",
+            "url": "/test.salesorderovp",
             "title": "Sales Orders OVP"
         }
     }
