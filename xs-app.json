@@ -1,0 +1,22 @@
+{
+    "welcomeFile": "index-cdn.html",
+    "authenticationMethod": "route",
+    "logout": {
+        "logoutEndpoint": "/do/logout",
+        "logoutPage": "/logout-page.html"
+    },
+    "routes": [
+        {
+            "source": "/sap/(.*)$",
+            "target": "/sap/$1",
+            "destination": "SET_HEADER_PROXY",
+            "csrfProtection": false
+        },
+        {
+            "source": "^(.*)$",
+            "target": "$1",
+            "service": "html5-apps-repo-rt",
+            "authenticationType": "xsuaa"
+        }
+    ]
+}
