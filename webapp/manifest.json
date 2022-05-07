@@ -171,6 +171,19 @@
                             "dateSettings": {
                                 "useDateRange": true
                             }
+                        },
+                        "quickVariantSelection": {
+                            "showCounts": true,
+                            "variants": {
+                                "0": {
+                                    "key": "_NotPaid",
+                                    "annotationPath": "com.sap.vocabularies.UI.v1.SelectionVariant#NotPaid"
+                                },
+                                "1": {
+                                    "key": "_Paid",
+                                    "annotationPath": "com.sap.vocabularies.UI.v1.SelectionVariant#Paid"
+                                }
+                            }
                         }
                     }
                 },
