@@ -19,17 +19,20 @@
                         <Record Type="UI.ReferenceFacet">
                             <PropertyValue Property="Label" String="Business Partner" />
                             <PropertyValue Property="ID" String="BusinessPartner" />
-                            <PropertyValue Property="Target" AnnotationPath="@UI.FieldGroup#BusinessPartner" />>
+                            <PropertyValue Property="Target" AnnotationPath="@UI.FieldGroup#BusinessPartner" />
+                            >
                         </Record>
                         <Record Type="UI.ReferenceFacet">
                             <PropertyValue Property="Label" String="Order Value" />
                             <PropertyValue Property="ID" String="OrderValue" />
-                            <PropertyValue Property="Target" AnnotationPath="@UI.FieldGroup#OrderValue" />>
+                            <PropertyValue Property="Target" AnnotationPath="@UI.FieldGroup#OrderValue" />
+                            >
                         </Record>
                         <Record Type="UI.ReferenceFacet">
                             <PropertyValue Property="Label" String="Items" />
                             <PropertyValue Property="ID" String="Items" />
-                            <PropertyValue Property="Target" AnnotationPath="to_Item/@UI.LineItem" />>
+                            <PropertyValue Property="Target" AnnotationPath="to_Item/@UI.LineItem" />
+                            >
                         </Record>
                     </Collection>
                 </Annotation>
@@ -43,6 +46,20 @@
                             <PropertyValue Property="Target" AnnotationPath="@UI.FieldGroup#Details" />
                         </Record>
                     </Collection>
+                </Annotation>
+                <Annotation Term="Common.SideEffects">
+                    <Record>
+                        <PropertyValue Property="SourceProperties">
+                            <Collection>
+                                <PropertyPath>Product</PropertyPath>
+                            </Collection>
+                        </PropertyValue>
+                        <PropertyValue Property="TargetProperties">
+                            <Collection>
+                                <PropertyPath>to_Product/Product_Text</PropertyPath>
+                            </Collection>
+                        </PropertyValue>
+                    </Record>
                 </Annotation>
             </Annotations>
         </Schema>
