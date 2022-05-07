@@ -172,6 +172,9 @@
                                 "useDateRange": true
                             }
                         },
+                        "dataLoadSettings": {
+                            "loadDataOnAppLaunch": "always"
+                        },
                         "quickVariantSelection": {
                             "showCounts": true,
                             "variants": {
