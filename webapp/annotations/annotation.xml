@@ -36,6 +36,20 @@
                         </Record>
                     </Collection>
                 </Annotation>
+                <Annotation Term="Common.SideEffects">
+                    <Record>
+                        <PropertyValue Property="SourceProperties">
+                            <Collection>
+                                <PropertyPath>OverallStatus</PropertyPath>
+                            </Collection>
+                        </PropertyValue>
+                        <PropertyValue Property="TargetProperties">
+                            <Collection>
+                                <PropertyPath>to_OverallStatus/SalesOrderOverallStatus_Text</PropertyPath>
+                            </Collection>
+                        </PropertyValue>
+                    </Record>
+                </Annotation>
             </Annotations>
             <Annotations Target="ZDEMO_C_SALESORDER_TX_CDS.ZDEMO_C_SalesOrderItem_TXType">
                 <Annotation Term="UI.Facets">
