@@ -28,7 +28,7 @@ server:
       paths:
         - path: /appconfig
           src: ./appconfig
-        - path: /resources/test.salesorder
+        - path: /webapp
           src: ./webapp
-        - path: /resources/test.salesorderovp
-          src: ../salesorder-ovp/webapp
+        - path: /test.salesorderovp
+          src: ../demo-sales-order-ovp/webapp
