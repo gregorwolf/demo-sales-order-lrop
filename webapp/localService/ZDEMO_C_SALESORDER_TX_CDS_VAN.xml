@@ -284,6 +284,9 @@
                         <Record Type="UI.DataField">
                             <PropertyValue Property="Value" Path="NetAmount" />
                         </Record>
+                        <Record Type="UI.DataField">
+                            <PropertyValue Property="Value" Path="CreatedAt" />
+                        </Record>
                     </Collection>
                 </Annotation>
                 <Annotation Term="UI.SelectionFields">
@@ -291,9 +294,10 @@
                         <PropertyPath>BusinessPartner</PropertyPath>
                         <PropertyPath>BillingStatus</PropertyPath>
                         <PropertyPath>OverallStatus</PropertyPath>
+                        <PropertyPath>CreatedAt</PropertyPath>
                     </Collection>
                 </Annotation>
-                <Annotation Term="UI.SelectionVariant" Qualifier="NotPaid">
+                <Annotation Term="UI.SelectionVariant" Qualifier="BackendNotPaid">
                     <Record>
                         <PropertyValue Property="Text" String="" />
                         <PropertyValue Property="Parameters">
@@ -310,7 +314,7 @@
                         </PropertyValue>
                     </Record>
                 </Annotation>
-                <Annotation Term="UI.SelectionVariant" Qualifier="Paid">
+                <Annotation Term="UI.SelectionVariant" Qualifier="BackendPaid">
                     <Record>
                         <PropertyValue Property="Text" String="" />
                         <PropertyValue Property="Parameters">
