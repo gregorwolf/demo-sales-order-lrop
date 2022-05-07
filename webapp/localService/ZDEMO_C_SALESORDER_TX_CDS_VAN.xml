@@ -95,7 +95,33 @@
                     </Record>
                 </Annotation>
             </Annotations>
+            <Annotations Target="ZDEMO_C_SALESORDER_TX_CDS.ZDEMO_C_SalesOrderItem_TXType/Product">
+                <Annotation Term="Common.Text" Path="to_Product/Product_Text">
+                    <Annotation Term="UI.TextArrangement" EnumMember="UI.TextArrangementType/TextLast" />
+                </Annotation>
+            </Annotations>
             <Annotations Target="ZDEMO_C_SALESORDER_TX_CDS.ZDEMO_C_SalesOrderItem_TXType">
+                <Annotation Term="UI.FieldGroup" Qualifier="Details">
+                    <Record>
+                        <PropertyValue Property="Data">
+                            <Collection>
+                                <Record Type="UI.DataField">
+                                    <PropertyValue Property="Value" Path="SalesOrder" />
+                                </Record>
+                                <Record Type="UI.DataField">
+                                    <PropertyValue Property="Value" Path="SalesOrderItem" />
+                                </Record>
+                                <Record Type="UI.DataField">
+                                    <PropertyValue Property="Value" Path="Product" />
+                                </Record>
+                                <Record Type="UI.DataField">
+                                    <PropertyValue Property="Value" Path="Quantity" />
+                                </Record>
+                            </Collection>
+                        </PropertyValue>
+                        <PropertyValue Property="Label" String="Details" />
+                    </Record>
+                </Annotation>
                 <Annotation Term="UI.HeaderInfo">
                     <Record>
                         <PropertyValue Property="TypeName" String="Sales Order Item" />
@@ -156,6 +182,9 @@
                 <Annotation Term="Common.FieldControl" EnumMember="Common.FieldControlType/Hidden" />
                 <Annotation Term="UI.Hidden" />
             </Annotations>
+            <Annotations Target="ZDEMO_C_SALESORDER_TX_CDS.ZDEMO_C_SalesOrder_TXType/SalesOrder">
+                <Annotation Term="Common.SemanticObject" String="SalesOrder" />
+            </Annotations>
             <Annotations Target="ZDEMO_C_SALESORDER_TX_CDS.ZDEMO_C_SalesOrder_TXType">
                 <Annotation Term="UI.FieldGroup" Qualifier="BusinessPartner">
                     <Record>
@@ -163,6 +192,9 @@
                             <Collection>
                                 <Record Type="UI.DataField">
                                     <PropertyValue Property="Value" Path="BusinessPartner" />
+                                </Record>
+                                <Record Type="UI.DataField">
+                                    <PropertyValue Property="Value" Path="to_BusinessPartner/CompanyName" />
                                 </Record>
                             </Collection>
                         </PropertyValue>
@@ -178,6 +210,9 @@
                                 </Record>
                                 <Record Type="UI.DataField">
                                     <PropertyValue Property="Value" Path="NetAmount" />
+                                </Record>
+                                <Record Type="UI.DataField">
+                                    <PropertyValue Property="Value" Path="OverallStatus" />
                                 </Record>
                             </Collection>
                         </PropertyValue>
@@ -219,6 +254,10 @@
                 </Annotation>
                 <Annotation Term="UI.LineItem">
                     <Collection>
+                        <Record Type="UI.DataFieldForIntentBasedNavigation">
+                            <PropertyValue Property="SemanticObject" String="SalesOrder" />
+                            <PropertyValue Property="Action" String="manage" />
+                        </Record>
                         <Record Type="UI.DataFieldForAction">
                             <PropertyValue Property="Label" String="Set to Paid" />
                             <PropertyValue Property="Action" String="ZDEMO_C_SALESORDER_TX_CDS.ZDEMO_C_SALESORDER_TX_CDS_Entities/ZDEMO_C_SalesOrder_TXSet_to_paid" />
@@ -249,9 +288,44 @@
                 </Annotation>
                 <Annotation Term="UI.SelectionFields">
                     <Collection>
+                        <PropertyPath>BusinessPartner</PropertyPath>
                         <PropertyPath>BillingStatus</PropertyPath>
                         <PropertyPath>OverallStatus</PropertyPath>
                     </Collection>
+                </Annotation>
+                <Annotation Term="UI.SelectionVariant" Qualifier="NotPaid">
+                    <Record>
+                        <PropertyValue Property="Text" String="" />
+                        <PropertyValue Property="Parameters">
+                            <Collection>
+                                <Record Type="UI.Parameter">
+                                    <PropertyValue Property="PropertyName" String="PropertyName" />
+                                    <PropertyValue Property="PropertyValue" String=": OverallStatus" />
+                                </Record>
+                                <Record Type="UI.Parameter">
+                                    <PropertyValue Property="PropertyName" String="PropertyValue" />
+                                    <PropertyValue Property="PropertyValue" String=": " />
+                                </Record>
+                            </Collection>
+                        </PropertyValue>
+                    </Record>
+                </Annotation>
+                <Annotation Term="UI.SelectionVariant" Qualifier="Paid">
+                    <Record>
+                        <PropertyValue Property="Text" String="" />
+                        <PropertyValue Property="Parameters">
+                            <Collection>
+                                <Record Type="UI.Parameter">
+                                    <PropertyValue Property="PropertyName" String="PropertyName" />
+                                    <PropertyValue Property="PropertyValue" String=": OverallStatus" />
+                                </Record>
+                                <Record Type="UI.Parameter">
+                                    <PropertyValue Property="PropertyName" String="PropertyValue" />
+                                    <PropertyValue Property="PropertyValue" String=": P" />
+                                </Record>
+                            </Collection>
+                        </PropertyValue>
+                    </Record>
                 </Annotation>
             </Annotations>
             <Annotations Target="ZDEMO_C_SALESORDER_TX_CDS.SEPM_I_BusinessPartnerType">
