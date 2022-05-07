@@ -233,10 +233,11 @@
                 <NavigationProperty Name="to_Product" Relationship="ZDEMO_C_SALESORDER_TX_CDS.assoc_AF508ED34EF6671AC3E7B24EA2998C81" FromRole="FromRole_assoc_AF508ED34EF6671AC3E7B24EA2998C81" ToRole="ToRole_assoc_AF508ED34EF6671AC3E7B24EA2998C81" />
                 <NavigationProperty Name="to_SalesOrder" Relationship="ZDEMO_C_SALESORDER_TX_CDS.assoc_506AECAF60F3C8C1BA0C5B7F629B453F" FromRole="FromRole_assoc_506AECAF60F3C8C1BA0C5B7F629B453F" ToRole="ToRole_assoc_506AECAF60F3C8C1BA0C5B7F629B453F" />
             </EntityType>
-            <EntityType Name="ZDEMO_C_SalesOrder_TXType" sap:label="Sales Order for transactional app" sap:content-version="1">
+            <EntityType Name="ZDEMO_C_SalesOrder_TXType" sap:content-version="1">
                 <Key>
                     <PropertyRef Name="SalesOrder" />
                 </Key>
+                <Property Name="Set_to_not_paid_ac" Type="Edm.Boolean" sap:label="Dyn. Action Control" sap:creatable="false" sap:updatable="false" sap:sortable="false" sap:filterable="false" />
                 <Property Name="Set_to_paid_ac" Type="Edm.Boolean" sap:label="Dyn. Action Control" sap:creatable="false" sap:updatable="false" sap:sortable="false" sap:filterable="false" />
                 <Property Name="SalesOrder" Type="Edm.String" Nullable="false" MaxLength="10" sap:display-format="UpperCase" sap:label="Sales Order ID" />
                 <Property Name="BusinessPartner" Type="Edm.String" MaxLength="10" sap:display-format="UpperCase" sap:label="Business Partner ID" />

@@ -178,6 +178,10 @@
                     </Collection>
                 </Annotation>
             </Annotations>
+            <Annotations Target="ZDEMO_C_SALESORDER_TX_CDS.ZDEMO_C_SalesOrder_TXType/Set_to_not_paid_ac">
+                <Annotation Term="Common.FieldControl" EnumMember="Common.FieldControlType/Hidden" />
+                <Annotation Term="UI.Hidden" />
+            </Annotations>
             <Annotations Target="ZDEMO_C_SALESORDER_TX_CDS.ZDEMO_C_SalesOrder_TXType/Set_to_paid_ac">
                 <Annotation Term="Common.FieldControl" EnumMember="Common.FieldControlType/Hidden" />
                 <Annotation Term="UI.Hidden" />
@@ -261,6 +265,11 @@
                         <Record Type="UI.DataFieldForAction">
                             <PropertyValue Property="Label" String="Set to Paid" />
                             <PropertyValue Property="Action" String="ZDEMO_C_SALESORDER_TX_CDS.ZDEMO_C_SALESORDER_TX_CDS_Entities/ZDEMO_C_SalesOrder_TXSet_to_paid" />
+                            <PropertyValue Property="InvocationGrouping" EnumMember="UI.OperationGroupingType/Isolated" />
+                        </Record>
+                        <Record Type="UI.DataFieldForAction">
+                            <PropertyValue Property="Label" String="Set to not Paid" />
+                            <PropertyValue Property="Action" String="ZDEMO_C_SALESORDER_TX_CDS.ZDEMO_C_SALESORDER_TX_CDS_Entities/ZDEMO_C_SalesOrder_TXSet_to_not_paid" />
                             <PropertyValue Property="InvocationGrouping" EnumMember="UI.OperationGroupingType/Isolated" />
                         </Record>
                         <Record Type="UI.DataField">

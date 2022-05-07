@@ -18,6 +18,7 @@
                 "uri": "/sap/opu/odata/sap/ZDEMO_C_SALESORDER_TX_CDS/",
                 "type": "OData",
                 "settings": {
+                    "odataVersion": "2.0",
                     "annotations": [
                         "ZDEMO_C_SALESORDER_TX_CDS_VAN",
                         "annotation"
