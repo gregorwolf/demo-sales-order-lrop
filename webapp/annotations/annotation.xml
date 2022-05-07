@@ -5,9 +5,6 @@
     <edmx:Reference Uri="https://sap.github.io/odata-vocabularies/vocabularies/UI.xml">
         <edmx:Include Namespace="com.sap.vocabularies.UI.v1" Alias="UI" />
     </edmx:Reference>
-    <edmx:Reference Uri="https://sap.github.io/odata-vocabularies/vocabularies/Communication.xml">
-        <edmx:Include Namespace="com.sap.vocabularies.Communication.v1" Alias="Communication" />
-    </edmx:Reference>
     <edmx:Reference Uri="/sap/opu/odata/sap/ZDEMO_C_SALESORDER_TX_CDS/$metadata">
         <edmx:Include Namespace="ZDEMO_C_SALESORDER_TX_CDS" Alias="SAP" />
     </edmx:Reference>
@@ -113,6 +110,18 @@
                         <PropertyValue Property="TargetProperties">
                             <Collection>
                                 <PropertyPath>to_Product/Product_Text</PropertyPath>
+                            </Collection>
+                        </PropertyValue>
+                    </Record>
+                </Annotation>
+            </Annotations>
+            <Annotations Target="SAP.ZDEMO_C_SALESORDER_TX_CDS_Entities/ZDEMO_C_SalesOrder_TXSet_to_paid">
+                <Annotation Term="Common.SideEffects">
+                    <Record>
+                        <PropertyValue Property="TargetEntities">
+                            <Collection>
+                                <NavigationPropertyPath>_it/to_OverallStatus</NavigationPropertyPath>
+                                <NavigationPropertyPath>_it/to_Item</NavigationPropertyPath>
                             </Collection>
                         </PropertyValue>
                     </Record>
