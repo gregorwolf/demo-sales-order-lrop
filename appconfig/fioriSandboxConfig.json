@@ -11,6 +11,12 @@
             "applicationType": "URL",
             "url": "/test.salesorderovp",
             "title": "Sales Orders OVP"
+        },
+        "EPMBusinessPartner-display": {
+            "additionalInformation": "SAPUI5.Component=test.demoepmbplrop",
+            "applicationType": "URL",
+            "url": "/test.demoepmbplrop",
+            "title": "EPM Business Partner"
         }
     }
 }

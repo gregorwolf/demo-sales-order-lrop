@@ -7,7 +7,7 @@ server:
   - name: fiori-tools-proxy
     afterMiddleware: compression
     configuration:
-      ignoreCertError: false # If set to true, certificate errors will be ignored. E.g. self-signed certificates will be accepted
+      ignoreCertError: true # If set to true, certificate errors will be ignored. E.g. self-signed certificates will be accepted
       backend:
       - path: /sap
         url: http://www.kentivo-cloud.de:8000
@@ -16,7 +16,7 @@ server:
         - /resources
         - /test-resources
         url: https://sapui5.hana.ondemand.com
-        version: 1.71.45 # The UI5 version, for instance, 1.78.1. Empty means latest version
+        version: 1.71.50 # The UI5 version, for instance, 1.78.1. Empty means latest version
   - name: fiori-tools-appreload
     afterMiddleware: compression
     configuration:
@@ -32,3 +32,5 @@ server:
           src: ./webapp
         - path: /test.salesorderovp
           src: ../demo-sales-order-ovp/webapp
+        - path: /test.demoepmbplrop
+          src: ../demo-epm-bp-lrop/webapp
