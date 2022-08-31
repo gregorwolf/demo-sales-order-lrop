@@ -1,22 +1,105 @@
 {
-    "applications": {
-        "SalesOrder-manage": {
-            "additionalInformation": "SAPUI5.Component=test.salesorder",
-            "applicationType": "URL",
-            "url": "/webapp",
-            "title": "Sales Orders"
+    "services": {
+        "LaunchPage": {
+            "adapter": {
+                "config": {
+                    "catalogs": [],
+                    "groups": [
+                        {
+                            "id": "DemoApps",
+                            "title": "Demo Apps",
+                            "isPreset": true,
+                            "isVisible": true,
+                            "isGroupLocked": false,
+                            "tiles": [
+                                {
+                                    "id": "salesorder",
+                                    "tileType": "sap.ushell.ui.tile.StaticTile",
+                                    "properties": {
+                                        "title": "Sales Orders",
+                                        "targetURL": "#SalesOrder-manage"
+                                    }
+                                },
+                                {
+                                    "id": "salesorderovp",
+                                    "tileType": "sap.ushell.ui.tile.StaticTile",
+                                    "properties": {
+                                        "title": "Sales Orders OVP",
+                                        "targetURL": "#SalesOrder-ovp"
+                                    }
+                                },
+                                {
+                                    "id": "demoepmbplrop",
+                                    "tileType": "sap.ushell.ui.tile.StaticTile",
+                                    "properties": {
+                                        "title": "EPM Business Partner",
+                                        "targetURL": "#EPMBusinessPartner-display"
+                                    }
+                                }
+                            ]
+                        }
+                    ]
+                }
+            }
         },
-        "SalesOrder-ovp": {
-            "additionalInformation": "SAPUI5.Component=test.salesorderovp",
-            "applicationType": "URL",
-            "url": "/test.salesorderovp",
-            "title": "Sales Orders OVP"
+        "NavTargetResolution": {
+            "config": {
+                "enableClientSideTargetResolution": true
+            }
         },
-        "EPMBusinessPartner-display": {
-            "additionalInformation": "SAPUI5.Component=test.demoepmbplrop",
-            "applicationType": "URL",
-            "url": "/test.demoepmbplrop",
-            "title": "EPM Business Partner"
+        "ClientSideTargetResolution": {
+            "adapter": {
+                "config": {
+                    "inbounds": {
+                        "SalesOrder": {
+                            "semanticObject": "SalesOrder",
+                            "action": "manage",
+                            "title": "Sales Orders",
+                            "signature": {
+                                "parameters": {},
+                                "additionalParameters": "allowed"
+                            },
+                            "resolutionResult": {
+                                "applicationType": "SAPUI5",
+                                "additionalInformation": "SAPUI5.Component=test.salesorder",
+                                "url": "/webapp"
+                            }
+                        },
+                        "SalesOrderOvp": {
+                            "semanticObject": "SalesOrder",
+                            "action": "ovp",
+                            "title": "Sales Orders OVP",
+                            "signature": {
+                                "parameters": {},
+                                "additionalParameters": "allowed"
+                            },
+                            "resolutionResult": {
+                                "applicationType": "SAPUI5",
+                                "additionalInformation": "SAPUI5.Component=test.salesorderovp",
+                                "url": "/test.salesorderovp"
+                            }
+                        },
+                        "EPMBusinessPartner": {
+                            "semanticObject": "EPMBusinessPartner",
+                            "action": "display",
+                            "title": "EPM Business Partner",
+                            "signature": {
+                                "parameters": {
+                                    "EPMBusinessPartner": {
+                                        "renameTo": "BusinessPartner"
+                                    }
+                                },
+                                "additionalParameters": "allowed"
+                            },
+                            "resolutionResult": {
+                                "applicationType": "SAPUI5",
+                                "additionalInformation": "SAPUI5.Component=test.demoepmbplrop",
+                                "url": "/test.demoepmbplrop"
+                            }
+                        }
+                    }
+                }
+            }
         }
     }
 }
