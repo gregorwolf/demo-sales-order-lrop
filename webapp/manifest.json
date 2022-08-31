@@ -142,6 +142,25 @@
                 "sap.ui.viewExtensions": {
                     "sap.suite.ui.generic.template.ListReport.view.ListReport": {},
                     "sap.suite.ui.generic.template.ObjectPage.view.Details": {}
+                },
+                "sap.ui.controllerExtensions": {
+                    "sap.suite.ui.generic.template.ListReport.view.ListReport": {
+                        "controllerName": "test.salesorder.ext.controller.ListReportExt",
+                        "sap.ui.generic.app": {
+                            "ZDEMO_C_SalesOrder_TX": {
+                                "EntitySet": "ZDEMO_C_SalesOrder_TX",
+                                "Actions": {
+                                    "setToPaidExtension": {
+                                        "id": "setToPaidExtensionButton",
+                                        "text": "Set to Paid Extension",
+                                        "press": "setToPaidExtension",
+                                        "requiresSelection": true,
+                                        "applicablePath": "CustomSetToPaid_ac"
+                                    }
+                                }
+                            }
+                        }
+                    }
                 }
             }
         },
