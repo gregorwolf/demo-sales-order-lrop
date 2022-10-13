@@ -65,6 +65,20 @@
                                 "url": "/webapp"
                             }
                         },
+                        "SalesOrderByBP": {
+                            "semanticObject": "EPMBusinessPartner",
+                            "action": "displaySO",
+                            "title": "Sales Orders by Business Partner",
+                            "signature": {
+                                "parameters": {},
+                                "additionalParameters": "allowed"
+                            },
+                            "resolutionResult": {
+                                "applicationType": "SAPUI5",
+                                "additionalInformation": "SAPUI5.Component=test.salesorder",
+                                "url": "/webapp"
+                            }
+                        },
                         "SalesOrderOvp": {
                             "semanticObject": "SalesOrder",
                             "action": "ovp",
