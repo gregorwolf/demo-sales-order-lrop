@@ -34,3 +34,5 @@ server:
           src: ../demo-sales-order-ovp/webapp
         - path: /test.demoepmbplrop
           src: ../demo-epm-bp-lrop/webapp
+        - path: /demosalesorderfreestyle
+          src: ../demo-sales-order-freestyle/webapp

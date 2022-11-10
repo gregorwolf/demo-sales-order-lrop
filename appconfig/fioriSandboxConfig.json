@@ -36,6 +36,15 @@
                                         "targetURL": "#EPMBusinessPartner-display"
                                     }
                                 }
+                                ,
+                                {
+                                    "id": "demosalesorderfreestyle",
+                                    "tileType": "sap.ushell.ui.tile.StaticTile",
+                                    "properties": {
+                                        "title": "Sales Orders Freestyle",
+                                        "targetURL": "#SalesOrder-freestyle"
+                                    }
+                                }
                             ]
                         }
                     ]
@@ -51,6 +60,20 @@
             "adapter": {
                 "config": {
                     "inbounds": {
+                        "SalesOrderFreestyle": {
+                            "semanticObject": "SalesOrder",
+                            "action": "freestyle",
+                            "title": "Sales Orders Freestyle",
+                            "signature": {
+                                "parameters": {},
+                                "additionalParameters": "allowed"
+                            },
+                            "resolutionResult": {
+                                "applicationType": "SAPUI5",
+                                "additionalInformation": "SAPUI5.Component=demosalesorderfreestyle",
+                                "url": "/demosalesorderfreestyle"
+                            }
+                        },
                         "SalesOrder": {
                             "semanticObject": "SalesOrder",
                             "action": "manage",
