@@ -10,7 +10,7 @@ server:
       ignoreCertError: true # If set to true, certificate errors will be ignored. E.g. self-signed certificates will be accepted
       backend:
       - path: /sap
-        url: http://www.kentivo-cloud.de:8000
+        url: http://vhcala4hci:50000
       ui5:
         path: 
         - /resources

@@ -7,7 +7,7 @@
 |**Generation Platform**<br>CLI|
 |**Floorplan Used**<br>List Report Object Page V2|
 |**Service Type**<br>SAP System (ABAP On Premise)|
-|**Service URL**<br>http://www.kentivo-cloud.de:8000/sap/opu/odata/sap/ZDEMO_C_SALESORDER_TX_CDS/
+|**Service URL**<br>http://vhcala4hci:50000/sap/opu/odata/sap/ZDEMO_C_SALESORDER_TX_CDS/
 |**Module Name**<br>salesorder|
 |**Application Title**<br>Sales Order|
 |**Namespace**<br>test|

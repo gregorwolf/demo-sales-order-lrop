@@ -14,7 +14,7 @@ builder:
       afterTask: generateCachebusterInfo
       configuration:
         target:
-          url: http://www.kentivo-cloud.de:8000
+          url: http://vhcala4hci:50000
         app:
           name: ZSOLROP
           description: Sales Order LROP
