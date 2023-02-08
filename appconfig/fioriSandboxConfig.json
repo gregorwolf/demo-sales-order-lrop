@@ -17,7 +17,7 @@
                                     "tileType": "sap.ushell.ui.tile.StaticTile",
                                     "properties": {
                                         "title": "Sales Orders",
-                                        "targetURL": "#SalesOrder-manage"
+                                        "targetURL": "#EPMSalesOrder-manage"
                                     }
                                 },
                                 {
@@ -25,7 +25,7 @@
                                     "tileType": "sap.ushell.ui.tile.StaticTile",
                                     "properties": {
                                         "title": "Sales Orders OVP",
-                                        "targetURL": "#SalesOrder-ovp"
+                                        "targetURL": "#EPMSalesOrder-ovp"
                                     }
                                 },
                                 {
@@ -33,7 +33,7 @@
                                     "tileType": "sap.ushell.ui.tile.StaticTile",
                                     "properties": {
                                         "title": "EPM Business Partner",
-                                        "targetURL": "#EPMBusinessPartner-display"
+                                        "targetURL": "#EPMCustomer-display"
                                     }
                                 }
                                 ,
@@ -42,7 +42,7 @@
                                     "tileType": "sap.ushell.ui.tile.StaticTile",
                                     "properties": {
                                         "title": "Sales Orders Freestyle",
-                                        "targetURL": "#SalesOrder-freestyle"
+                                        "targetURL": "#EPMSalesOrder-freestyle"
                                     }
                                 }
                             ]
@@ -60,8 +60,8 @@
             "adapter": {
                 "config": {
                     "inbounds": {
-                        "SalesOrderFreestyle": {
-                            "semanticObject": "SalesOrder",
+                        "EPMSalesOrderFreestyle": {
+                            "semanticObject": "EPMSalesOrder",
                             "action": "freestyle",
                             "title": "Sales Orders Freestyle",
                             "signature": {
@@ -74,8 +74,8 @@
                                 "url": "/demosalesorderfreestyle"
                             }
                         },
-                        "SalesOrder": {
-                            "semanticObject": "SalesOrder",
+                        "EPMSalesOrder": {
+                            "semanticObject": "EPMSalesOrder",
                             "action": "manage",
                             "title": "Sales Orders",
                             "signature": {
@@ -88,8 +88,8 @@
                                 "url": "/webapp"
                             }
                         },
-                        "SalesOrderByBP": {
-                            "semanticObject": "EPMBusinessPartner",
+                        "EPMSalesOrderByBP": {
+                            "semanticObject": "EPMCustomer",
                             "action": "displaySO",
                             "title": "Sales Orders by Business Partner",
                             "signature": {
@@ -102,8 +102,8 @@
                                 "url": "/webapp"
                             }
                         },
-                        "SalesOrderOvp": {
-                            "semanticObject": "SalesOrder",
+                        "EPMSalesOrderOvp": {
+                            "semanticObject": "EPMSalesOrder",
                             "action": "ovp",
                             "title": "Sales Orders OVP",
                             "signature": {
@@ -116,13 +116,13 @@
                                 "url": "/test.salesorderovp"
                             }
                         },
-                        "EPMBusinessPartner": {
-                            "semanticObject": "EPMBusinessPartner",
+                        "EPMCustomer": {
+                            "semanticObject": "EPMCustomer",
                             "action": "display",
                             "title": "EPM Business Partner",
                             "signature": {
                                 "parameters": {
-                                    "EPMBusinessPartner": {
+                                    "EPMCustomer": {
                                         "renameTo": "BusinessPartner"
                                     }
                                 },

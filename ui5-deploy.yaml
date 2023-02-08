@@ -15,8 +15,13 @@ builder:
       configuration:
         target:
           url: http://vhcala4hci:50000
+          auth: basic
+          client: 001
+        credentials:
+          username: env:USER
+          password: env:PASSWORD
         app:
           name: ZSOLROP
           description: Sales Order LROP
           package: $ZDEMO_SO_UI
-          transport: ""
+          transport: env:TRANSPORT

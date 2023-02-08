@@ -1,5 +1,8 @@
 ###
-GET {{$dotenv backend}}/sap/opu/odata/sap/ZDEMO_C_SALESORDER_TX_CDS/?sap-client=400
+GET {{$dotenv backend}}/sap/bc/ping?sap-client=001
+Authorization: Basic {{$dotenv USER}}:{{$dotenv PASSWORD}}
+###
+GET {{$dotenv backend}}/sap/opu/odata/sap/ZDEMO_C_SALESORDER_TX_CDS/
 Authorization: Basic {{$dotenv USER}}:{{$dotenv PASSWORD}}
 Accept: application/json
 ###

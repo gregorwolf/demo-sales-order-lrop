@@ -53,7 +53,7 @@
                         "parameters": {},
                         "additionalParameters": "allowed"
                     },
-                    "semanticObject": "SalesOrder",
+                    "semanticObject": "EPMSalesOrder",
                     "action": "manage",
                     "title": "{{appTitle}}",
                     "info": "{{appInfo}}",
@@ -64,7 +64,7 @@
                         "parameters": {},
                         "additionalParameters": "allowed"
                     },
-                    "semanticObject": "EPMBusinessPartner",
+                    "semanticObject": "EPMCustomer",
                     "action": "displaySO",
                     "title": "{{appTitle}}",
                     "info": "{{appInfo}}",
