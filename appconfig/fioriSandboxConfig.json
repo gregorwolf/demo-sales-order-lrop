@@ -124,6 +124,8 @@
                                 "parameters": {
                                     "EPMCustomer": {
                                         "renameTo": "BusinessPartner"
+                                    },
+                                    "Country": {
                                     }
                                 },
                                 "additionalParameters": "allowed"
