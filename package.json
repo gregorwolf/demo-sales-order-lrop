@@ -1,44 +1,44 @@
 {
-	"name": "salesorder",
-	"version": "0.0.1",
-	"private": true,
-	"sapux": true,
-	"sapuxLayer": "CUSTOMER_BASE",
-	"description": "Sales Order",
-	"keywords": [
-		"ui5",
-		"openui5",
-		"sapui5"
-	],
-	"main": "webapp/index.html",
-	"scripts": {
-		"start": "fiori run --open 'test/flpSandbox.html#EPMSalesOrder-manage'",
-		"start-local": "fiori run --config ./ui5-local.yaml --open 'test/flpSandboxMockServer.html#EPMSalesOrder-manage'",
-		"start-repo-mock": "node node_modules/@sap/html5-repo-mock/index.js",
-		"start-noflp": "fiori run --open 'index.html'",
-		"build": "ui5 build -a --clean-dest --include-task=generateManifestBundle generateCachebusterInfo",
-		"deploy": "npm run build && fiori deploy --config ui5-deploy.yaml && rimraf archive.zip",
-		"deploy-config": "fiori add deploy-config",
-		"start-mock": "fiori run --open 'test/flpSandboxMockServer.html#EPMSalesOrder-manage'",
-		"undeploy": "fiori undeploy --config ui5-deploy.yaml",
-		"deploy-test": "npm run build && fiori deploy --config ui5-deploy.yaml --testMode true"
-	},
-	"devDependencies": {
-		"@sap/approuter": "^11.5.0",
-		"@sap/eslint-plugin-ui5-jsdocs": "2.0.8",
-		"@sap/html5-repo-mock": "^2.1.0",
-		"@sap/ux-specification": "^1.102.9",
-		"@sap/ux-ui5-tooling": "^1.7.5",
-		"@sapui5/ts-types": "1.102.9",
-		"@ui5/cli": "^2.14.16",
-		"@ui5/fs": "^2.0.6",
-		"@ui5/logger": "^2.0.1",
-		"eslint": "8.25.0",
-		"rimraf": "3.0.2"
-	},
-	"ui5": {
-		"dependencies": [
-			"@sap/ux-ui5-tooling"
-		]
-	}
+  "name": "salesorder",
+  "version": "0.0.1",
+  "private": true,
+  "sapux": true,
+  "sapuxLayer": "CUSTOMER_BASE",
+  "description": "Sales Order",
+  "keywords": [
+    "ui5",
+    "openui5",
+    "sapui5"
+  ],
+  "main": "webapp/index.html",
+  "scripts": {
+    "start": "fiori run --open 'test/flpSandbox.html#EPMSalesOrder-manage'",
+    "start-local": "fiori run --config ./ui5-local.yaml --open 'test/flpSandboxMockServer.html#EPMSalesOrder-manage'",
+    "start-repo-mock": "node node_modules/@sap/html5-repo-mock/index.js",
+    "start-noflp": "fiori run --open 'index.html'",
+    "build": "ui5 build -a --clean-dest --include-task=generateManifestBundle generateCachebusterInfo",
+    "deploy": "npm run build && fiori deploy --config ui5-deploy.yaml && rimraf archive.zip",
+    "deploy-config": "fiori add deploy-config",
+    "start-mock": "fiori run --open 'test/flpSandboxMockServer.html#EPMSalesOrder-manage'",
+    "undeploy": "fiori undeploy --config ui5-deploy.yaml",
+    "deploy-test": "npm run build && fiori deploy --config ui5-deploy.yaml --testMode true"
+  },
+  "devDependencies": {
+    "@sap/approuter": "^15",
+    "@sap/eslint-plugin-ui5-jsdocs": "2.0.8",
+    "@sap/html5-repo-mock": "^2",
+    "@sap/ux-specification": "^1.120.1",
+    "@sap/ux-ui5-tooling": "^1",
+    "@sapui5/ts-types": "1.120.3",
+    "@ui5/cli": "^2",
+    "@ui5/fs": "^3",
+    "@ui5/logger": "^3",
+    "eslint": "^8",
+    "rimraf": "^5"
+  },
+  "ui5": {
+    "dependencies": [
+      "@sap/ux-ui5-tooling"
+    ]
+  }
 }
