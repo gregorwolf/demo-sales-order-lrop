@@ -1,4 +1,5 @@
-specVersion: '2.2'
+# yaml-language-server: $schema=https://ui5.github.io/cli/schema/ui5.yaml.json
+specVersion: '4.0'
 metadata:
   name: 'salesorder'
 type: application
@@ -10,13 +11,13 @@ server:
       ignoreCertError: true # If set to true, certificate errors will be ignored. E.g. self-signed certificates will be accepted
       backend:
       - path: /sap
-        url: http://vhcala4hci:50000
+        url: https://a4h.computerservice-wolf.com:50001
       ui5:
         path: 
         - /resources
         - /test-resources
-        url: https://sapui5.hana.ondemand.com
-        version: 1.71.50 # The UI5 version, for instance, 1.78.1. Empty means latest version
+        url: https://ui5.sap.com
+        version: 1.71.79 # The UI5 version, for instance, 1.78.1. Empty means latest version
   - name: fiori-tools-appreload
     afterMiddleware: compression
     configuration:

@@ -1,6 +1,6 @@
-# yaml-language-server: $schema=https://sap.github.io/ui5-tooling/schema/ui5.yaml.json
+# yaml-language-server: $schema=https://ui5.github.io/cli/schema/ui5.yaml.json
 
-specVersion: '2.2'
+specVersion: '4.0'
 metadata:
   name: 'salesorder'
 type: application
@@ -14,7 +14,7 @@ builder:
       afterTask: generateCachebusterInfo
       configuration:
         target:
-          url: http://vhcala4hci:50000
+          url: https://a4h.computerservice-wolf.com:50001
           auth: basic
           client: 001
         credentials:

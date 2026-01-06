@@ -1,4 +1,5 @@
-specVersion: '2.4'
+# yaml-language-server: $schema=https://ui5.github.io/cli/schema/ui5.yaml.json
+specVersion: '4.0'
 metadata:
   name: 'salesorder'
 type: application
@@ -23,7 +24,7 @@ server:
       ignoreCertError: false # If set to true, certificate errors will be ignored. E.g. self-signed certificates will be accepted
       backend:
       - path: /sap
-        url: http://vhcala4hci:50000
+        url: https://a4h.computerservice-wolf.com:50001
   - name: fiori-tools-appreload
     afterMiddleware: compression
     configuration:
