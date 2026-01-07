@@ -100,7 +100,7 @@
             "css": []
         },
         "dependencies": {
-            "minUI5Version": "1.94.1",
+            "minUI5Version": "1.108.39",
             "libs": {
                 "sap.ui.core": {
                     "lazy": false
